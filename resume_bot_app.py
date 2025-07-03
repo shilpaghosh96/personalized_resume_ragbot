@@ -18,9 +18,9 @@ def load_bot():
     import warnings
     warnings.filterwarnings('ignore')
 
-    GROQ_API_KEY = "REMOVEDQsJ5iLOl0KlHMxxhcYkiWGdyb3FYkixYosn3SRjCJRlJILxIxt2d"
+    GROQ_API_KEY = "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"
 
-    reader = SimpleDirectoryReader(input_files=["/home/shilpaghosh96/personalized_resume_bot/Resume_Shilpa_Ghosh_msds.pdf"])
+    reader = SimpleDirectoryReader(input_files=["/workspaces/personalized_resume_ragbot/Resume_Shilpa_Ghosh_msds.pdf"])
     documents = reader.load_data()
 
     text_splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=200)
@@ -40,9 +40,9 @@ def load_bot():
         node_parser=nodes
     )
 
-    vector_index.storage_context.persist(persist_dir="/home/shilpaghosh96/personalized_resume_bot")
+    vector_index.storage_context.persist(persist_dir="storage")
 
-    storage_context = StorageContext.from_defaults(persist_dir="/home/shilpaghosh96/personalized_resume_bot")
+    storage_context = StorageContext.from_defaults(persist_dir="storage")
     index = load_index_from_storage(storage_context)
 
     query_engine = index.as_query_engine()
