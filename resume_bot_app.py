@@ -51,7 +51,7 @@ def load_bot():
 
 # Streamlit UI
 st.set_page_config(page_title="Resume Bot", layout="centered")
-st.title("🤖 Resume Q&A Bot")
+st.title("Resume Q&A Bot")
 
 query_engine = load_bot()
 
