@@ -20,7 +20,7 @@ def load_bot():
 
     GROQ_API_KEY = "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"
 
-    reader = SimpleDirectoryReader(input_files=["/workspaces/personalized_resume_ragbot/Resume_Shilpa_Ghosh_msds.pdf"])
+    reader = SimpleDirectoryReader(input_files=["Resume_Shilpa_Ghosh_msds.pdf"])
     documents = reader.load_data()
 
     text_splitter = SentenceSplitter(chunk_size=1024, chunk_overlap=200)
