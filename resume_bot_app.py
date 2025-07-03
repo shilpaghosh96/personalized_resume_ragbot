@@ -18,7 +18,7 @@ def load_bot():
     import warnings
     warnings.filterwarnings('ignore')
 
-    GROQ_API_KEY = "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"
+    GROQ_API_KEY = "REMOVED"
 
     reader = SimpleDirectoryReader(input_files=["Resume_Shilpa_Ghosh_msds.pdf"])
     documents = reader.load_data()
